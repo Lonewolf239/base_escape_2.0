@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <fstream>
 using namespace std;
 //инвентарь часть 1
@@ -37,7 +37,7 @@ void gate(int gt);
 void house(int hos);
 void shed(int sh);
 
-//костыли функицй (часть 3)
+//костыли функций (часть 3)
 void floor1(char floor1[25]);
 void cycle3(int cyc3);
 void ladder(int lad);
@@ -258,7 +258,7 @@ void door(int dr) {
 		cout << "___________________________________________\nYou inserted the key into the lock and turned... the lock opened and fell to the floor with a clang of metal..." << endl;
 		cout << endl << endl << "Do you want to save your progress?" << endl;
 		cin >> save;
-		if (save[0] == 'y' || save[0] == 'Y') {
+		if (save[0] == 'y' || save[0] == 'Y' || save[0] == 'S' || save[0] == 's') {
 			ofstream file("save.txt");
 			if (file.is_open()) {
 				file << "lx55GZ6dG6eJBl2oh6S0vtXVS3|MsS";
@@ -388,7 +388,7 @@ void mansion(int man) {
 		if (mn[0] == 'S' || mn[0] == 's') {
 			cout << endl << endl << "Do you want to save your progress?" << endl << endl;
 			cin >> save;
-			if (save[0] == 'Y' || save[0] == 'y') {
+			if (save[0] == 'Y' || save[0] == 'y' || save[0] == 'S' || save[0] == 's') {
 				ofstream file("save.txt");
 				if (file.is_open()) {
 					file << "D$S?nX7E~v|I5v5Zp2r?S1UnaD6z3|";
@@ -566,7 +566,7 @@ void ladder(int lad) {
 		if (x[0] == 'E' || x[0] == 'e') {
 			cout << endl << endl << "Do you want to save your progress?" << endl;
 			cin >> sav;
-			if (sav[0] == 'Y' || sav[0] == 'y') {
+			if (sav[0] == 'Y' || sav[0] == 'y' || sav[0] == 'S' || sav[0] == 's') {
 				ofstream file("save.txt");
 				if (file.is_open()) {
 					file << "zxt*S0C|iWYltWM7sBoOFDc@JJ@vr2";
@@ -574,7 +574,7 @@ void ladder(int lad) {
 					cout << endl << endl << endl << "SAVE SUCCESSFUL" << endl << endl << endl;
 					isHasKey2 = false;
 					isHasPlanks = false;
-					cout << "___________________________________________\nYou climbed to the second floor...the floor creaked under your feet, but looking around you found:\Cabinet\nBedroom\Restroom\nAttic" << endl;
+					cout << "___________________________________________\nYou climbed to the second floor...the floor creaked under your feet, but looking around you found:\nCabinet\nBedroom\nRestroom\nAttic" << endl;
 					cin >> y;
 					floor2(y);
 				}
@@ -662,7 +662,7 @@ void floor2(char floor2[25]) { //C  B  R  A
 		cin >> cab;
 		if (cab[0] == 'O' || cab[0] == 'o')
 			cabinet(1);
-		if (cab[0] == 2)
+		if (cab[0] == 'L' || cab[0] == 'l')
 			cycle4(1);
 	}
 	if (floor2[0] == 'B' || floor2[0] == 'b') {
@@ -798,7 +798,7 @@ void restroom(int res) {
 		cycle4(1);
 	}
 	if (!isHasKey3) {
-		cout << "___________________________________________\nYou entered the break room...it was a spacious room with several sofas and some sports equipment\nAmidst all this rubbish, you noticed a key lying on the sofa\nTake:\nKey\nLeave" << endl;
+		cout << "___________________________________________\nYou entered the rest room...it was a spacious room with several sofas and some sports equipment\nAmidst all this rubbish, you noticed a key lying on the sofa\nTake:\nKey\nLeave" << endl;
 		cin >> back;
 		if (back[0] == 'K' || back[0] == 'k') {
 			cout << "___________________________________________\nYou have taken the key..." << endl;
