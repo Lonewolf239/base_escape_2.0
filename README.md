@@ -1,1 +1,2 @@
-# base_escape_2.0
+# Base _escape completely redesigned from scratch
+#Version for Win64 and Win32
